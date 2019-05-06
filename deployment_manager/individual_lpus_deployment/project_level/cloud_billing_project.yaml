@@ -1,0 +1,23 @@
+imports:
+- path: project_custom_role.jinja
+
+resources:
+- name: custom-role
+  type: project_custom_role.jinja
+  properties:
+    roleId: cloudBillingRole
+    description: GCP Cloud Billing LPU Permissions
+    includedPermissions:
+    - bigquery.jobs.create
+    - bigquery.datasets.create
+    - bigquery.datasets.get
+    - bigquery.datasets.getIamPolicy
+    - bigquery.tables.create
+    - bigquery.tables.delete
+    - bigquery.tables.export
+    - bigquery.tables.get
+    - bigquery.tables.getData
+    - bigquery.tables.list
+    - bigquery.tables.update
+    - bigquery.tables.updateData
+    - resourcemanager.projects.get

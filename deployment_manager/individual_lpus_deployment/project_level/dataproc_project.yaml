@@ -1,0 +1,44 @@
+imports:
+- path: project_custom_role.jinja
+
+resources:
+- name: custom-role
+  type: project_custom_role.jinja
+  properties:
+    roleId: dataProcRole
+    description: GCP Dataproc LPU Permissions
+    includedPermissions:
+    - cloudnotifications.activities.list
+    - monitoring.alertPolicies.get
+    - monitoring.alertPolicies.list
+    - monitoring.dashboards.get
+    - monitoring.dashboards.list
+    - monitoring.groups.get
+    - monitoring.groups.list
+    - monitoring.metricDescriptors.get
+    - monitoring.metricDescriptors.list
+    - monitoring.monitoredResourceDescriptors.get
+    - monitoring.monitoredResourceDescriptors.list
+    - monitoring.notificationChannelDescriptors.get
+    - monitoring.notificationChannelDescriptors.list
+    - monitoring.notificationChannels.get
+    - monitoring.notificationChannels.list
+    - monitoring.publicWidgets.get
+    - monitoring.publicWidgets.list
+    - monitoring.timeSeries.list
+    - monitoring.uptimeCheckConfigs.get
+    - monitoring.uptimeCheckConfigs.list
+    - resourcemanager.projects.get
+    - stackdriver.projects.get-
+    - compute.machineTypes.get
+    - compute.regions.get
+    - compute.regions.list
+    - compute.zones.get
+    - dataproc.clusters.get
+    - dataproc.clusters.list
+    - dataproc.jobs.get
+    - dataproc.jobs.list
+    - dataproc.operations.get
+    - dataproc.operations.list
+    - dataproc.workflowTemplates.get
+    - dataproc.workflowTemplates.list

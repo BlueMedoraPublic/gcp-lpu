@@ -1,0 +1,25 @@
+resources:
+- name: custom-role
+  type: gcp-types/iam-v1:organizations.roles
+  properties:
+    parent: organizations/{{ properties["organizationId"] }}
+    roleId: {{ properties["roleId"] }}
+    role:
+      title: <Custom Title>
+      description: <Custom Description>
+      stage: ALPHA
+      includedPermissions:
+      - bigquery.jobs.create
+      - bigquery.datasets.create
+      - bigquery.datasets.get
+      - bigquery.datasets.getIamPolicy
+      - bigquery.tables.create
+      - bigquery.tables.delete
+      - bigquery.tables.export
+      - bigquery.tables.get
+      - bigquery.tables.getData
+      - bigquery.tables.list
+      - bigquery.tables.update
+      - bigquery.tables.updateData
+      - resourcemanager.projects.get
+      - resourcemanager.projects.list

@@ -1,0 +1,22 @@
+imports:
+- path: project_custom_role.jinja
+
+resources:
+- name: custom-role
+  type: project_custom_role.jinja
+  properties:
+    roleId: dnsRole
+    description: GCP DNS LPU Permissions
+    includedPermissions:
+    - compute.networks.get
+    - dns.changes.get
+    - dns.changes.list
+    - dns.dnsKeys.get
+    - dns.dnsKeys.list
+    - dns.managedZoneOperations.get
+    - dns.managedZoneOperations.list
+    - dns.managedZones.get
+    - dns.managedZones.list
+    - dns.projects.get
+    - dns.resourceRecordSets.list
+    - resourcemanager.projects.get

@@ -1,0 +1,41 @@
+imports:
+- path: project_custom_role.jinja
+
+resources:
+- name: custom-role
+  type: project_custom_role.jinja
+  properties:
+    roleId: appEngineRole
+    description: GCP App Engine LPU Permissions
+    includedPermissions:
+    - cloudnotifications.activities.list
+    - monitoring.alertPolicies.get
+    - monitoring.alertPolicies.list
+    - monitoring.dashboards.get
+    - monitoring.dashboards.list
+    - monitoring.groups.get
+    - monitoring.groups.list
+    - monitoring.metricDescriptors.get
+    - monitoring.metricDescriptors.list
+    - monitoring.monitoredResourceDescriptors.get
+    - monitoring.monitoredResourceDescriptors.list
+    - monitoring.notificationChannelDescriptors.get
+    - monitoring.notificationChannelDescriptors.list
+    - monitoring.notificationChannels.get
+    - monitoring.notificationChannels.list
+    - monitoring.publicWidgets.get
+    - monitoring.publicWidgets.list
+    - monitoring.timeSeries.list
+    - monitoring.uptimeCheckConfigs.get
+    - monitoring.uptimeCheckConfigs.list
+    - resourcemanager.projects.get
+    - stackdriver.projects.get
+    - appengine.applications.get
+    - appengine.instances.get
+    - appengine.instances.list
+    - appengine.operations.get
+    - appengine.operations.list
+    - appengine.services.get
+    - appengine.services.list
+    - appengine.versions.get
+    - appengine.versions.list
