@@ -1,0 +1,24 @@
+resources:
+- name: custom-role
+  type: gcp-types/iam-v1:organizations.roles
+  properties:
+    parent: organizations/{{ properties["organizationId"] }}
+    roleId: {{ properties["roleId"] }}
+    role:
+      title: <Custom Title>
+      description: <Custom Description>
+      stage: ALPHA
+      includedPermissions:
+      - compute.networks.get
+      - dns.changes.get
+      - dns.changes.list
+      - dns.dnsKeys.get
+      - dns.dnsKeys.list
+      - dns.managedZoneOperations.get
+      - dns.managedZoneOperations.list
+      - dns.managedZones.get
+      - dns.managedZones.list
+      - dns.projects.get
+      - dns.resourceRecordSets.list
+      - resourcemanager.projects.get
+      - resourcemanager.projects.list
